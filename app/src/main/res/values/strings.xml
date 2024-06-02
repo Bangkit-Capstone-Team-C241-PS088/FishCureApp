@@ -1,3 +1,75 @@
 <resources>
-    <string name="app_name">FishCureApp</string>
+    <string name="app_name">Capstone</string>
+    <string name="name">Name</string>
+    <string name="sample_name">zulekha</string>
+    <string name="sample_email">nanana@gmail.com</string>
+    <string name="sample_password">1717171</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_changes">Save</string>
+    <string name="forget_pass">Lupa Kata Sandi?</string>
+    <string name="register_now">Belum punya akun?</string>
+    <string name="register_now_btn">Register</string>
+    <string name="login">Login</string>
+    <string name="login_title">Log In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register_title">Register</string>
+    <string name="username">Username</string>
+    <string name="new_password">New Password</string>
+    <string name="phone">Phone</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="login_now">Already have an account?</string>
+    <string name="login_now_btn">Login</string>
+    <string name="home">Home</string>
+    <string name="edit">edit</string>
+    <string name="profile">Profile</string>
+    <string name="history">History</string>
+    <string name="article">Article</string>
+    <string name="greet">Selamat Datang</string>
+    <string name="greet_name">Safitri</string>
+    <string name="home_msg">Pastikan Anda memotret atau memindai dengan cahaya yang baik untuk hasil yang akurat.</string>
+    <string name="home_desc">Pantau kesehatan Ikan Anda dengan mudah dan cepat</string>
+    <string name="try_now">Coba Sekarang</string>
+    <string name="isi_deskripsi">Ikan nemo, atau ikan badut, memang
+menjadi favorit banyak orang............</string>
+    <string name="date_dummy">20/05/2024</string>
+    <string name="Koi_Herpes_Virus">Koi Herpes Virus a</string>
+    <string name="scan_result">Detail result scan</string>
+    <string name="upload">Upload</string>
+    <string name="acc_percent">17%</string>
+    <string name="next_step">Tindakan Selanjutnya</string>
+    <string name="accuracy">Akurasi</string>
+    <string name="description">Deskripsi</string>
+    <string name="gejala">Gejala</string>
+    <string name="rekomen_obat">Rekomendasi Obat</string>
+    <string name="tips_penanganan">TipsPenanganan</string>
+    <string name="source_title">Source</string>
+    <string name="sample_source">www.halodoc.com/artikel/</string>
+    <string name="reset">Reset</string>
+    <string name="reset_title">Reset Password</string>
+    <string name="splashscreen">splashscreen</string>
+    <string name="password_invalid">Minimal terdiri dari 8 karakter</string>
+    <string name="email_invalid">Masukkan alamat email yang valid</string>
+    <string name="saran">Saran</string>
+    <string name="aksi">Aksi</string>
+    <string name="pesan">Pesan</string>
+    <string name="msg_failed_changes_name">Gagal melakukan perubahan pada nama</string>
+    <string name="msg_failed_changes">Gagal melakukan perubahan</string>
+    <string name="allow_permission">Mohon izinkan akses kamera untuk menggunakan fitur</string>
+    <string name="current_password">Current Password</string>
+    <string name="sample_star_password">********</string>
+
+    <string name="onboard_description1">Selamat datang di Aplikasi FishCure. Mari periksa Ikanmu !</string>
+    <string name="onboard_description2">Kami akan membantumu memahami lebih jelas hasil scanmu</string>
+    <string name="onboard_description3">Periksa penyakit Ikan Anda dengan Aplikasi FishCure</string>
+    <string name="onboard_get_started">Get Started</string>
+    <string name="msg_success_reset">Link Reset Password Telah Dikirim Ke Email</string>
+
+    <string name="article_title">Tips merawat ikan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_history">halaman history</string>
+    <string name="tips_perawatan">Tips Perawatan</string>
+    <string name="lorem_ipsum2">Lorem ipsum dolor sit amet consectetur. Dolor velit sit egestas proin dui mattis mattis. Molestie non consequat senectus ac felis sem ipsum. Hac viverra vitae mauris sit velit vestibulum egestas ut feugiat. Massa urna maecenas venenatis habitasse scelerisque dapibus.</string>
 </resources>
