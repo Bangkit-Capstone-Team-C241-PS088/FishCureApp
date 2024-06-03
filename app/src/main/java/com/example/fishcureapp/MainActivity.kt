@@ -1,8 +1,10 @@
 package com.example.fishcureapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
+import com.example.fishcureapp.ui.auth.RegisterActivity
 import com.example.fishcureapp.ui.repository.AuthRepository
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +14,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
 
         // Contoh penggunaan fungsi register
         authRepository.register("test@example.com", "password123") { response ->

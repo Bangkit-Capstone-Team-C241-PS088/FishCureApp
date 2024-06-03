@@ -1,5 +1,11 @@
+package com.example.fishcureapp.ui.auth
+
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fishcureapp.R
@@ -13,6 +19,14 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var authApi: AuthApi
+    private lateinit var btn_login: Button
+    private lateinit var tv_register_now: TextView
+    private lateinit var et_email: EditText
+    private lateinit var et_password: EditText
+    private lateinit var progress_bar: ProgressBar
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -34,39 +34,39 @@ class AuthRepository {
         })
     }
 
-    fun sendOtp(email: String, callback: (ApiResponse?) -> Unit) {
-        api.sendOtp(email).enqueue(object : Callback<ApiResponse> {
-            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                callback(response.body())
-            }
-
-            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
-                callback(null)
-            }
-        })
-    }
-
-    fun authOtp(email: String, otp: String, callback: (ApiResponse?) -> Unit) {
-        api.authOtp(email, otp).enqueue(object : Callback<ApiResponse> {
-            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                callback(response.body())
-            }
-
-            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
-                callback(null)
-            }
-        })
-    }
-
-    fun updatePassword(email: String, newPassword: String, callback: (ApiResponse?) -> Unit) {
-        api.updatePassword(email, newPassword).enqueue(object : Callback<ApiResponse> {
-            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                callback(response.body())
-            }
-
-            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
-                callback(null)
-            }
-        })
-    }
+//    fun sendOtp(email: String, callback: (ApiResponse?) -> Unit) {
+//        api.sendOtp(email).enqueue(object : Callback<ApiResponse> {
+//            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+//                callback(response.body())
+//            }
+//
+//            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+//                callback(null)
+//            }
+//        })
+//    }
+//
+//    fun authOtp(email: String, otp: String, callback: (ApiResponse?) -> Unit) {
+//        api.authOtp(email, otp).enqueue(object : Callback<ApiResponse> {
+//            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+//                callback(response.body())
+//            }
+//
+//            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+//                callback(null)
+//            }
+//        })
+//    }
+//
+//    fun updatePassword(email: String, newPassword: String, callback: (ApiResponse?) -> Unit) {
+//        api.updatePassword(email, newPassword).enqueue(object : Callback<ApiResponse> {
+//            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+//                callback(response.body())
+//            }
+//
+//            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+//                callback(null)
+//            }
+//        })
+//    }
 }

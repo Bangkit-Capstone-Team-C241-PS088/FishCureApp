@@ -51,6 +51,8 @@ menjadi favorit banyak orang............</string>
     <string name="splashscreen">splashscreen</string>
     <string name="password_invalid">Minimal terdiri dari 8 karakter</string>
     <string name="email_invalid">Masukkan alamat email yang valid</string>
+    <string name="invalid_input">Invalid input. Please enter a valid email and password.</string>
+
     <string name="saran">Saran</string>
     <string name="aksi">Aksi</string>
     <string name="pesan">Pesan</string>
