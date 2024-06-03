@@ -66,6 +66,12 @@ menjadi favorit banyak orang............</string>
     <string name="onboard_get_started">Get Started</string>
     <string name="msg_success_reset">Link Reset Password Telah Dikirim Ke Email</string>
 
+    <string name="please_fill_all_fields">Please fill all fields</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="registration_successful">Registration Successful</string>
+    <string name="registration_failed">Registration Failed</string>
+
     <string name="article_title">Tips merawat ikan</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
