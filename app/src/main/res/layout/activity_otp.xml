@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.auth.reset.ResetPasswordActivity">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,12 +25,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_reset_title"
+                android:id="@+id/tv_otp_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/reset_title"
+                android:text="OTP Authentication"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -49,7 +48,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_reset_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_otp_title" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/et_email_layout"
@@ -77,20 +76,36 @@
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <Button
+                android:id="@+id/btn_send_otp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/button"
+                android:text="Send"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_email_layout" />
+
             <TextView
-                android:id="@+id/tv_new_password"
+                android:id="@+id/tv_otp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/new_password"
+                android:layout_marginTop="24dp"
+                android:text="OTP"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_email_layout" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_send_otp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_new_password_layout"
+                android:id="@+id/et_otp_layout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -104,19 +119,19 @@
                 app:hintEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_new_password">
+                app:layout_constraintTop_toBottomOf="@+id/tv_otp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_new_password"
+                    android:id="@+id/et_otp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint=""
-                    android:inputType="textPassword" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_reset"
+                android:id="@+id/btn_verify_otp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
@@ -124,14 +139,14 @@
                 android:layout_marginBottom="64dp"
                 android:layout_marginEnd="100dp"
                 android:background="@drawable/button"
-                android:text="@string/reset"
+                android:text="Verify"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_new_password_layout" />
+                app:layout_constraintTop_toBottomOf="@id/et_otp_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

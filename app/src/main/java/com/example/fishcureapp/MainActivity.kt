@@ -2,39 +2,31 @@ package com.example.fishcureapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import android.widget.Toast
-import com.example.fishcureapp.ui.auth.RegisterActivity
-import com.example.fishcureapp.ui.repository.AuthRepository
+import com.example.fishcureapp.ui.auth.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private val authRepository = AuthRepository()
+    private var mDelayHandler: Handler? = null
+    private var duration: Long = 1500 //1.5 seconds
+
+    private val mRunnable: Runnable = Runnable {
+        val intent = Intent(applicationContext, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intent = Intent(this, RegisterActivity::class.java)
-        startActivity(intent)
 
-        // Contoh penggunaan fungsi register
-        authRepository.register("test@example.com", "password123") { response ->
-            if (response != null && response.status == "success") {
-                Toast.makeText(this, response.message, Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, response?.message ?: "Request failed", Toast.LENGTH_SHORT).show()
-            }
-        }
+        supportActionBar?.hide()
 
-        // Contoh penggunaan fungsi login
-        authRepository.login("test@example.com", "password123") { response ->
-            if (response != null && response.status == "success") {
-                Toast.makeText(this, response.message, Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, response?.message ?: "Request failed", Toast.LENGTH_SHORT).show()
-            }
-        }
+        mDelayHandler = Handler()
 
-        // Implementasikan sendOtp, authOtp, dan updatePassword dengan cara serupa
+        mDelayHandler!!.postDelayed(mRunnable,duration)
+
+
     }
 }

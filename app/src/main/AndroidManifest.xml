@@ -14,7 +14,7 @@
         android:theme="@style/Theme.FishCureApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.auth.ResetPasswordActivity"
+            android:name=".ui.auth.reset.ResetPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MenuActivity"
@@ -38,11 +38,17 @@
             android:name=".ui.article.detailarticle.DetailArticleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.auth.RegisterActivity"
+            android:name=".ui.auth.register.RegisterActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.auth.LoginActivity"
-            android:exported="false" />
+
+        <activity android:name=".ui.auth.login.LoginActivity"
+            android:exported="false"
+            />
+
+        <activity android:name=".ui.auth.otp.OtpActivity"
+            android:exported="false"
+            />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -39,6 +39,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -52,6 +56,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    implementation ("com.github.kirich1409:viewbindingpropertydelegate:1.5.3")
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("com.github.bumptech.glide:glide:4.15.0")
