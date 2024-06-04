@@ -23,20 +23,20 @@ interface AuthApi {
         @Body loginRequest: LoginRequest
     ): Response<ApiResponse>
 
-//    @POST("sendOtp")
-//    suspend fun sendOtp(
-//        @Body sendOtpRequest: SendOtpRequest
-//    ): Response<ApiResponse>
+    @POST("sendOtp")
+    suspend fun sendOtp(
+        @Body sendOtpRequest: SendOtpRequest
+    ): Response<ApiResponse>
 
-//    @POST("authOtp")
-//    suspend fun verifyOtp(
-//        @Body authOtpRequest: AuthOtpRequest
-//    ): Response<ApiResponse>
+    @POST("authOtp")
+    suspend fun verifyOtp(
+        @Body authOtpRequest: AuthOtpRequest
+    ): Response<ApiResponse>
 
-//    @POST("updatePassword")
-//    suspend fun updatePassword(
-//        @Body updatePassRequest: UpdatePassRequest
-//    ): Response<ApiResponse>
+    @POST("updatePassword")
+    suspend fun updatePassword(
+        @Body updatePassRequest: UpdatePassRequest
+    ): Response<ApiResponse>
 
 
 }
