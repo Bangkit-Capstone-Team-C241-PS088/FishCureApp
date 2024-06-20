@@ -1,29 +1,23 @@
 package com.example.fishcureapp.ui.onboard.adapter
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.example.fishcureapp.data.local.model.Onboard
-import com.example.fishcureapp.databinding.ItemOnboardBinding
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class OnboardListAdapter(private val onboardingList: List<Onboard>) :
-    RecyclerView.Adapter<OnboardListAdapter.OnboardViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnboardViewHolder {
-        val binding = ItemOnboardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return OnboardViewHolder(binding)
+class OnboardListAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
+
+    private val fragmentList = listOf(
+        OnboardingFragment1(),
+        OnboardingFragment2(),
+        OnboardingFragment3()
+
+    )
+
+    override fun getItemCount(): Int {
+        return fragmentList.size
     }
 
-    override fun onBindViewHolder(holder: OnboardViewHolder, position: Int) {
-        holder.bind(onboardingList[position])
-    }
-
-    override fun getItemCount(): Int = onboardingList.size
-
-    inner class OnboardViewHolder(private val binding: ItemOnboardBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(onboard: Onboard) {
-            binding.imgOnboard.setImageResource(onboard.img)
-            binding.tvDescOnboard.text = onboard.description
-        }
+    override fun createFragment(position: Int): Fragment {
+        return fragmentList[position]
     }
 }

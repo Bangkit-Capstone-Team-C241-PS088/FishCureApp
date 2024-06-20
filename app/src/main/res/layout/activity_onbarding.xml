@@ -1,59 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.onboard.OnboardingActivity">
+    android:orientation="vertical">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager_onboard"
-        android:layout_width="0dp"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_weight="1" />
 
-    <ImageView
-        android:id="@+id/btn_left_onboard"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:src="@drawable/ic_arrow_left"
-        app:layout_constraintBottom_toBottomOf="@id/btn_onboard"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btn_onboard"
-        tools:ignore="ContentDescription,ImageContrastCheck" />
 
-    <ImageView
-        android:id="@+id/btn_right_onboard"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/ic_arrow_right"
-        app:layout_constraintBottom_toBottomOf="@id/btn_onboard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btn_onboard"
-        tools:ignore="ContentDescription,ImageContrastCheck" />
 
-    <Button
-        android:id="@+id/btn_onboard"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/button"
-        android:text="@string/onboard_get_started"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_right_onboard"
-        app:layout_constraintStart_toEndOf="@id/btn_left_onboard" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -12,22 +12,11 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/btn_back_toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/baseline_arrow_back_24"
-        tools:ignore="ContentDescription,ImageContrastCheck"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
     <TextView
         android:id="@+id/tv_toolbar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="@string/detail"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_marginEnd="20dp"

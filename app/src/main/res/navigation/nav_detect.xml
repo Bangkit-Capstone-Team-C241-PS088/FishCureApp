@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_detect"
+    app:startDestination="@id/cameraFragment">
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.fishcureapp.ui.detection.result.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera"
+        >
+
+        <action
+            android:id="@+id/action_cameraFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.fishcureapp.ui.detection.result.DetectionResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_detection_result"
+        >
+        <argument
+            android:name="imageResult"
+            app:argType="com.example.fishcureapp.data.local.model.ImageResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewFragment"
+        android:name="com.example.fishcureapp.ui.detection.result.PreviewFragment"
+        android:label="PreviewFragment"
+        tools:layout="@layout/fragment_image_preview"
+        >
+        <action
+            android:id="@+id/action_previewFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="imageResult"
+            app:argType="com.example.fishcureapp.data.local.model.ImageResult" />
+    </fragment>
+</navigation>

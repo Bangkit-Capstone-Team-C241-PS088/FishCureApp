@@ -30,7 +30,7 @@
             card_view:layout_constraintTop_toTopOf="parent"
             app:shapeAppearance="@style/roundedCorner10"
             app:shapeAppearanceOverlay="@style/roundedCorner10"
-            app:srcCompat="@drawable/img_ikan"
+            app:srcCompat="@drawable/ikan_hias"
             tools:ignore="ImageContrastCheck" />
 
         <TextView

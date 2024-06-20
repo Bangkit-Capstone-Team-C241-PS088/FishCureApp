@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="tosca">#359D97</color>
     <color name="blue">#251E72</color>
+    <color name="gray_200">#F5F5F5</color>
+    <color name="gray_400">#a8a7a7</color>
+
+    <color name="white_transparent">#2AFFFFFF</color>
 </resources>

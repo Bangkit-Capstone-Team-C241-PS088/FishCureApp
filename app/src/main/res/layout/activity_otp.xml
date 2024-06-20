@@ -13,13 +13,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/img_logo"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_logo"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="8dp"
+                android:text="FISHCURE"
+                android:textColor="@color/tosca"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
+                android:layout_marginTop="92dp"
                 android:layout_marginEnd="32dp"
                 android:text="OTP Authentication"
                 android:textColor="@color/black"
@@ -36,7 +41,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <TextView
                 android:id="@+id/tv_email"
@@ -83,7 +88,8 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="100dp"
-                android:background="@drawable/button"
+                android:backgroundTint="@color/tosca"
+                app:cornerRadius="16dp"
                 android:text="Send"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -138,7 +144,8 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="64dp"
                 android:layout_marginEnd="100dp"
-                android:background="@drawable/button"
+                android:backgroundTint="@color/tosca"
+                app:cornerRadius="16dp"
                 android:text="Verify"
                 android:textColor="@color/white"
                 android:textSize="16sp"

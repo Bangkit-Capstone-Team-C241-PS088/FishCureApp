@@ -3,12 +3,15 @@ package com.example.fishcureapp.data.factory
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.fishcureapp.data.AuthRepository
 import com.example.fishcureapp.data.di.Injection
 import com.example.fishcureapp.ui.auth.login.LoginViewModel
 import com.example.fishcureapp.ui.auth.reset.ResetPassViewModel
 import com.example.fishcureapp.ui.auth.otp.OtpViewModel
 import com.example.fishcureapp.ui.auth.register.RegisterViewModel
-import com.example.fishcureapp.data.AuthRepository
+import com.example.fishcureapp.ui.detection.result.SolutionViewModel
+import com.example.fishcureapp.ui.history.HistoryViewModel
+import com.example.fishcureapp.ui.history.detailhistory.HistoryDetailViewModel
 import com.example.fishcureapp.ui.home.HomeViewModel
 import com.example.fishcureapp.ui.profile.ProfileViewModel
 
@@ -34,6 +37,17 @@ class ViewModelFactory (private val repository: AuthRepository) : ViewModelProvi
             }
             modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
                 ProfileViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(SolutionViewModel::class.java) -> {
+                SolutionViewModel(repository) as T
+
+
+            modelClass.isAssignableFrom(HistoryViewModel::class.java) -> {
+                HistoryViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(HistoryDetailViewModel::class.java) -> {
+                HistoryDetailViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

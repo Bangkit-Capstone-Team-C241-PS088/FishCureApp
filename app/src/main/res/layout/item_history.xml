@@ -30,47 +30,43 @@
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/img_ikan" />
+            tools:src="@drawable/ikan_hias" />
 
         <TextView
             android:id="@+id/tv_date_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
             android:textSize="16sp"
-            android:textStyle="bold"
-            card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@id/img_item_history"
-            card_view:layout_constraintTop_toTopOf="@id/img_item_history"
+            card_view:layout_constraintTop_toTopOf="parent"
             tools:text="@string/date_dummy" />
 
         <TextView
             android:id="@+id/tv_detection_category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
             android:maxLines="1"
             android:textSize="16sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toStartOf="@id/tv_date_history"
-            card_view:layout_constraintTop_toBottomOf="@id/tv_date_history"
-            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/img_item_history"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_date_history"
             tools:text="@string/Koi_Herpes_Virus" />
 
         <TextView
             android:id="@+id/tv_detection"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="4dp"
-            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
             android:maxLines="2"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintStart_toStartOf="@id/tv_detection_category"
-            card_view:layout_constraintTop_toBottomOf="@id/tv_detection_category"
-            tools:text="@string/scan_result" />
+            android:textSize="16sp"
+            card_view:layout_constraintStart_toEndOf="@+id/img_item_history"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_detection_category"
+            tools:text="0%" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,7 +26,7 @@
             android:scaleType="centerCrop"
             app:shapeAppearance="@style/roundedCorner20"
             app:shapeAppearanceOverlay="@style/roundedCorner20"
-            android:src="@drawable/img_ikan"
+            android:src="@drawable/ikan_hias"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar" />
@@ -80,12 +80,12 @@
             app:layout_constraintTop_toTopOf="@id/tv_title_accuracy_history" />
 
         <TextView
-            android:id="@+id/tv_title_desc_history"
+            android:id="@+id/tv_title_gejala_histories"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:text="@string/description"
+            android:text="@string/gejala"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -94,7 +94,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_date_history" />
 
         <TextView
-            android:id="@+id/tv_desc_result_history"
+            android:id="@+id/tv_gejala_result_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
@@ -102,112 +102,60 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_desc_history"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_gejala_histories"
             tools:text="@string/lorem_ipsum2" />
 
         <TextView
-            android:id="@+id/tv_title_symptoms_history"
+            android:id="@+id/tv_title_obat_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/gejala"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_desc_result_history" />
-
-        <TextView
-            android:id="@+id/tv_desc_symptoms_history"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_symptoms_history"
-            tools:text="@string/lorem_ipsum2" />
-
-        <TextView
-            android:id="@+id/tv_title_rekomen_obat_history"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/rekomen_obat"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_desc_symptoms_history" />
+            app:layout_constraintTop_toBottomOf="@id/tv_gejala_result_history" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/tv_title_rekomen_obathistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:clipToPadding="false"
-            android:overScrollMode="never"
-            android:scrollbarSize="2dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_rekomen_obathistory"
-            app:layout_constraintBottom_toTopOf="@id/tv_title_penanganan_history"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:listitem="@layout/item_points" />
 
         <TextView
             android:id="@+id/tv_title_penanganan_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/tips_penanganan"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_rekomen_obathistory" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_obat_history" />
 
         <TextView
             android:id="@+id/tv_desc_penanganan_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
             android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title_penanganan_history"
             tools:text="@string/isi_deskripsi" />
 
         <TextView
-            android:id="@+id/tv_title_perawatan_history"
+            android:id="@+id/tv_desc_obat_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/tips_perawatan"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_desc_penanganan_history" />
-
-        <TextView
-            android:id="@+id/tv_desc_perawatan_history"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginBottom="32dp"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_perawatan_history"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_obat_history"
             tools:text="@string/lorem_ipsum2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.fishcureapp.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
@@ -8,6 +9,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.fishcureapp.R
 import com.example.fishcureapp.databinding.ActivityMenuBinding
+import com.example.fishcureapp.ui.auth.login.LoginActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MenuActivity : AppCompatActivity() {
@@ -21,7 +23,15 @@ class MenuActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
-        val email = intent.getStringExtra("email") ?: ""
+        val email = getLoggedInUser()
+
+        if (email.isNullOrEmpty()) {
+            // Redirect to login if no user is logged in
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.bottom_nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
@@ -36,6 +46,13 @@ class MenuActivity : AppCompatActivity() {
         ).build()
 
         setupActionBarWithNavController(navController, appBarConfiguration)
+    }
+
+
+
+    private fun getLoggedInUser(): String? {
+        val sharedPref = this.getSharedPreferences("user_prefs", MODE_PRIVATE)
+        return sharedPref.getString("email", "")
     }
 
 

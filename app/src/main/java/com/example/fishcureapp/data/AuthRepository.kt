@@ -1,20 +1,34 @@
 package com.example.fishcureapp.data
 
-import com.example.fishcureapp.data.api.AuthApi
-import com.example.fishcureapp.data.request.LoginRequest
+import androidx.lifecycle.LiveData
+import com.example.fishcureapp.data.network.api.ApiService
+import com.example.fishcureapp.data.network.request.LoginRequest
 import com.example.fishcureapp.data.local.UserPreference
+import com.example.fishcureapp.data.local.historydao.HistoryDao
+import com.example.fishcureapp.data.local.model.History
 import com.example.fishcureapp.data.local.model.User
-import com.example.fishcureapp.data.request.AuthOtpRequest
-import com.example.fishcureapp.data.request.RegisterRequest
-import com.example.fishcureapp.data.request.SendOtpRequest
-import com.example.fishcureapp.data.request.UpdatePassRequest
-import com.example.fishcureapp.ui.model.ApiResponse
+import com.example.fishcureapp.data.network.request.AuthOtpRequest
+import com.example.fishcureapp.data.network.request.GetHistoryRequest
+import com.example.fishcureapp.data.network.request.RegisterRequest
+import com.example.fishcureapp.data.network.request.SendOtpRequest
+import com.example.fishcureapp.data.network.request.SolutionRequest
+import com.example.fishcureapp.data.network.request.UpdatePassRequest
+import com.example.fishcureapp.data.network.response.ApiResponse
+import com.example.fishcureapp.data.network.response.HistoryResponse
+import com.example.fishcureapp.data.network.response.SavedHistoryResponse
+import com.example.fishcureapp.data.network.response.SolutionResponseData
 import kotlinx.coroutines.flow.Flow
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Response
+import java.io.File
 
 class AuthRepository(
-    private val apiService: AuthApi,
-    private val userPreference: UserPreference
+    private val apiService: ApiService,
+    private val userPreference: UserPreference,
+    private val dao : HistoryDao
 ) {
 
     suspend fun register(email: String, password: String): Response<ApiResponse> {
@@ -41,6 +55,38 @@ class AuthRepository(
         val updatePassRequest = UpdatePassRequest(email, newPassword)
         return apiService.updatePassword(updatePassRequest)
     }
+
+    suspend fun diseaseSolution(diseaseName:String): Response<SolutionResponseData> {
+        val solutionRequest = SolutionRequest(diseaseName)
+        return apiService.solution(solutionRequest)
+
+    }
+
+    suspend fun insertHistory(newHistory: History): Long{
+        return dao.insertTask(newHistory)
+    }
+
+    suspend fun saveHistory(email: String, diseaseName: String, akurasi: Double, imageFile: File): Response<HistoryResponse> {
+        val emailRequestBody = email.toRequestBody("text/plain".toMediaTypeOrNull())
+        val diseaseNameRequestBody = diseaseName.toRequestBody("text/plain".toMediaTypeOrNull())
+        val akurasiRequestBody = akurasi.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+
+        val requestFile = imageFile.asRequestBody("image/png".toMediaTypeOrNull())
+        val imagePart = MultipartBody.Part.createFormData("file", imageFile.name, requestFile)
+
+        return apiService.saveHistory(emailRequestBody, diseaseNameRequestBody, akurasiRequestBody, imagePart)
+    }
+
+    fun getAllHistory(): LiveData<List<History>> {
+        return dao.getAllHistory()
+    }
+
+    suspend fun getHistory(email:String):Response<SavedHistoryResponse> {
+        val historyRequest = GetHistoryRequest(email)
+        return apiService.getHistory(historyRequest)
+    }
+
+
 
     suspend fun saveSession(user: User) {
         userPreference.saveSession(user)

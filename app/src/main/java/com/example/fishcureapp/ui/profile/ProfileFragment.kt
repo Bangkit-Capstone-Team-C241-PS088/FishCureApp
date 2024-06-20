@@ -72,6 +72,7 @@ class ProfileFragment : Fragment() {
 
             } else {
                 Toast.makeText(requireContext(), "Failed to update password: ${result.error}", Toast.LENGTH_SHORT).show()
+                // Handle password update failure
             }
         }
     }

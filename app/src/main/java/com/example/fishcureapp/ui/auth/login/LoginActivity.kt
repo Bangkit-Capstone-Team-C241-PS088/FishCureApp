@@ -49,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.loginResult.observe(this) { result ->
             binding.progressBar.visibility = View.GONE
             if (result.success) {
+
                 Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
@@ -63,6 +64,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
 
 
 }

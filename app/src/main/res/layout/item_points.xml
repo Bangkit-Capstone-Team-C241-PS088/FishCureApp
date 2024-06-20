@@ -12,14 +12,14 @@
     android:layout_marginBottom="8dp"
     card_view:cardCornerRadius="16dp">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ic_points"
         android:layout_width="8dp"
         android:layout_marginTop="8dp"
         android:layout_height="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_ikan"
+        android:background="@drawable/point_indicator"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -32,6 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ic_points"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/lorem_ipsum2" />
+        tools:text="@string/lorem_ipsum_short" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

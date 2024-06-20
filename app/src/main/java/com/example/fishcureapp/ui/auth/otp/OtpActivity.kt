@@ -22,7 +22,10 @@ class OtpActivity:AppCompatActivity() {
         binding = ActivityOtpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val email = intent.getStringExtra("email")
+        val sharedPref = this.getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val email = sharedPref.getString("email_registered", "") // Retrieve email from SharedPreference
+        binding.etEmail.setText(email)
+        //val email = intent.getStringExtra("email")
 
         binding.btnSendOtp.setOnClickListener {
             if (email != null) {

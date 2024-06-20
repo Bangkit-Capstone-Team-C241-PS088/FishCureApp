@@ -32,7 +32,7 @@
                 android:scaleType="centerCrop"
                 app:shapeAppearance="@style/roundedCorner20"
                 app:shapeAppearanceOverlay="@style/roundedCorner20"
-                app:srcCompat="@drawable/img_ikan"
+                app:srcCompat="@drawable/ikan_hias"
                 tools:ignore="ImageContrastCheck" />
         </LinearLayout>
     </ScrollView>

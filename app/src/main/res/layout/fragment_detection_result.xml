@@ -1,0 +1,178 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detection.result.DetectionResultFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/my_toolbar" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_detect_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/roundedCorner20"
+            app:shapeAppearanceOverlay="@style/roundedCorner20"
+            android:src="@drawable/ikan_hias"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <TextView
+            android:id="@+id/tv_detection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/img_detect_result"
+            app:layout_constraintStart_toStartOf="@id/img_detect_result"
+            app:layout_constraintTop_toBottomOf="@id/img_detect_result"
+            tools:text="@string/Koi_Herpes_Virus" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/img_detect_result"
+            app:layout_constraintTop_toTopOf="@id/tv_title_accuracy"
+            tools:text="@string/date_dummy" />
+
+        <TextView
+            android:id="@+id/tv_title_accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            android:text="@string/accuracy"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detection" />
+
+        <TextView
+            android:id="@+id/tv_desc_accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/acc_percent"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_title_accuracy"
+            app:layout_constraintTop_toTopOf="@id/tv_title_accuracy" />
+
+        <TextView
+            android:id="@+id/tv_title_symptoms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/gejala"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+        <TextView
+            android:id="@+id/tv_desc_symptoms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_symptoms"
+            tools:text="@string/lorem_ipsum2"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/tv_title_rekomen_obat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/rekomen_obat"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc_symptoms" />
+
+        <TextView
+            android:id="@+id/tv_title_penanganan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tips_penanganan"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_obat" />
+
+        <TextView
+            android:id="@+id/tv_desc_penanganan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_penanganan"
+            tools:text="@string/lorem_ipsum2" />
+
+        <TextView
+            android:id="@+id/tv_desc_obat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_rekomen_obat"
+            tools:text="@string/lorem_ipsum2" />
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/tosca"
+            android:text="Back to Home"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_penanganan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
