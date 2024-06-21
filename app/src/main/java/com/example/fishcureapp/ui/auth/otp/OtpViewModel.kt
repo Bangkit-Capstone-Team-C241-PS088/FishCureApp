@@ -31,7 +31,6 @@ class OtpViewModel(private val repository: AuthRepository) : ViewModel() {
             }
         }
     }
-
     fun verifyOtp(email: String, otp: String) {
         viewModelScope.launch {
             try {

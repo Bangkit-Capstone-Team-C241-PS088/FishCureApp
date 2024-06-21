@@ -7,6 +7,7 @@ import com.example.fishcureapp.data.local.UserPreference
 import com.example.fishcureapp.data.local.historydao.HistoryDao
 import com.example.fishcureapp.data.local.model.History
 import com.example.fishcureapp.data.local.model.User
+import com.example.fishcureapp.data.network.request.ArticleRequest
 import com.example.fishcureapp.data.network.request.AuthOtpRequest
 import com.example.fishcureapp.data.network.request.GetHistoryRequest
 import com.example.fishcureapp.data.network.request.RegisterRequest
@@ -14,6 +15,7 @@ import com.example.fishcureapp.data.network.request.SendOtpRequest
 import com.example.fishcureapp.data.network.request.SolutionRequest
 import com.example.fishcureapp.data.network.request.UpdatePassRequest
 import com.example.fishcureapp.data.network.response.ApiResponse
+import com.example.fishcureapp.data.network.response.ArticleResponse
 import com.example.fishcureapp.data.network.response.HistoryResponse
 import com.example.fishcureapp.data.network.response.SavedHistoryResponse
 import com.example.fishcureapp.data.network.response.SolutionResponseData
@@ -60,6 +62,11 @@ class AuthRepository(
         val solutionRequest = SolutionRequest(diseaseName)
         return apiService.solution(solutionRequest)
 
+    }
+
+    suspend fun getArticle(email: String): Response<ArticleResponse> {
+        val articleRequest = ArticleRequest(email)
+        return apiService.getArticle(articleRequest)
     }
 
     suspend fun insertHistory(newHistory: History): Long{

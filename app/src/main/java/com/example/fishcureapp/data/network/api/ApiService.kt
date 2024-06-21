@@ -1,5 +1,6 @@
 package com.example.fishcureapp.data.network.api
 
+import com.example.fishcureapp.data.network.request.ArticleRequest
 import com.example.fishcureapp.data.network.request.AuthOtpRequest
 import com.example.fishcureapp.data.network.request.GetHistoryRequest
 import com.example.fishcureapp.data.network.request.LoginRequest

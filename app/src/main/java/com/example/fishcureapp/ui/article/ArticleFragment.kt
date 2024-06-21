@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.fishcureapp.data.adapter.ArticleAdapter
 import com.example.fishcureapp.data.factory.ViewModelFactory
 import com.example.fishcureapp.databinding.FragmentArticleBinding
 

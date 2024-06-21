@@ -24,7 +24,7 @@ class OnboardingPageChangeCallback(
     }
 
     override fun onPageScrollStateChanged(state: Int) {
-        // Tidak perlu implementasi
+
     }
 
     fun getSelectedPosition(): Int {
