@@ -56,7 +56,7 @@ Fishcure is a mobile application developed to detect and predict specific elemen
   <img src="https://github.com/Bangkit-Capstone-Team-C241-PS088/FishCureApp/assets/120003045/0f63bf21-5e67-4f82-9807-63f5eee094b9" alt="Detail Article" width="200"/>
 </p>
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Installation
 **1.Clone this Project to your Computer**
